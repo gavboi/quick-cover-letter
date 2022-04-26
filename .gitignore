@@ -1,6 +1,6 @@
 # working space folders
-# sections/*
-# out/*
+sections/*
+out/*
 
 # latex
 *.aux
