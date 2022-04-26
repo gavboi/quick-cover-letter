@@ -1,0 +1,8 @@
+# working space folders
+# sections/*
+# out/*
+
+# latex
+*.aux
+*.aug
+*.out
