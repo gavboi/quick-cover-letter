@@ -1,6 +1,10 @@
+# boooooooo get em outta here
+__pycache__/
+
 # working space folders
-sections/*
-out/*
+sections/
+subjects/
+out/
 
 # latex
 *.aux
