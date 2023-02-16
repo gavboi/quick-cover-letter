@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>menu module &#8212; Cover Letter Writer 0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/groundwork.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="section_loader module" href="section_loader.html" />
+    <link rel="prev" title="file_manager module" href="file_manager.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="section_loader.html" title="section_loader module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="file_manager.html" title="file_manager module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cover Letter Writer 0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">quick-cover-letter</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">menu module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-menu">
+<span id="menu-module"></span><h1>menu module<a class="headerlink" href="#module-menu" title="Permalink to this headline">¶</a></h1>
+<p>This module acts as a controller for the system.</p>
+<p>Contains:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="#menu.main" title="menu.main"><code class="xref py py-func docutils literal notranslate"><span class="pre">main()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#menu.update_status" title="menu.update_status"><code class="xref py py-func docutils literal notranslate"><span class="pre">update_status()</span></code></a></p></li>
+</ul>
+</div></blockquote>
+<dl class="py data">
+<dt class="sig sig-object py" id="menu.MAINL_IN">
+<span class="sig-prename descclassname"><span class="pre">menu.</span></span><span class="sig-name descname"><span class="pre">MAINL_IN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[[&lt;PySimpleGUI.PySimpleGUI.Frame</span> <span class="pre">object&gt;]]</span></em><a class="headerlink" href="#menu.MAINL_IN" title="Permalink to this definition">¶</a></dt>
+<dd><p>GUI elements for section file management.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="menu.MAINL_OUT">
+<span class="sig-prename descclassname"><span class="pre">menu.</span></span><span class="sig-name descname"><span class="pre">MAINL_OUT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[[&lt;PySimpleGUI.PySimpleGUI.Frame</span> <span class="pre">object&gt;]]</span></em><a class="headerlink" href="#menu.MAINL_OUT" title="Permalink to this definition">¶</a></dt>
+<dd><p>GUI elements for starting generation of a pdf.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="menu.MAINL_STATUS">
+<span class="sig-prename descclassname"><span class="pre">menu.</span></span><span class="sig-name descname"><span class="pre">MAINL_STATUS</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">[[&lt;PySimpleGUI.PySimpleGUI.Text</span> <span class="pre">object&gt;],</span> <span class="pre">[&lt;PySimpleGUI.PySimpleGUI.Pane</span> <span class="pre">object&gt;]]</span></em><a class="headerlink" href="#menu.MAINL_STATUS" title="Permalink to this definition">¶</a></dt>
+<dd><p>GUI elements for showing the status of files.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="menu.edit_profile_menu">
+<span class="sig-prename descclassname"><span class="pre">menu.</span></span><span class="sig-name descname"><span class="pre">edit_profile_menu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#menu.edit_profile_menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pops open a window for editing personal information.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="menu.edit_section_menu">
+<span class="sig-prename descclassname"><span class="pre">menu.</span></span><span class="sig-name descname"><span class="pre">edit_section_menu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#menu.edit_section_menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pops open a window for editing an existing section.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="menu.main">
+<span class="sig-prename descclassname"><span class="pre">menu.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#menu.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="menu.new_pdf_menu">
+<span class="sig-prename descclassname"><span class="pre">menu.</span></span><span class="sig-name descname"><span class="pre">new_pdf_menu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#menu.new_pdf_menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pops open a window for creating a new cover letter.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="menu.new_section_menu">
+<span class="sig-prename descclassname"><span class="pre">menu.</span></span><span class="sig-name descname"><span class="pre">new_section_menu</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#menu.new_section_menu" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pops open a window for creating a new section.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="menu.quick_pdf">
+<span class="sig-prename descclassname"><span class="pre">menu.</span></span><span class="sig-name descname"><span class="pre">quick_pdf</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#menu.quick_pdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Randomly creates a cover letter from the available sections,
+while following formatting rules. Pops open a window alerting the
+user that this was done.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="menu.update_status">
+<span class="sig-prename descclassname"><span class="pre">menu.</span></span><span class="sig-name descname"><span class="pre">update_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#menu.update_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the output element in the GUI to reflect latest values.</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="file_manager.html"
+                          title="previous chapter">file_manager module</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="section_loader.html"
+                          title="next chapter">section_loader module</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/menu.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="section_loader.html" title="section_loader module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="file_manager.html" title="file_manager module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Cover Letter Writer 0.1 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >quick-cover-letter</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">menu module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, gavboi.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

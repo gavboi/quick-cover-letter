@@ -15,7 +15,7 @@
     <script src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="quick-cover-letter" href="modules.html" /> 
+    <link rel="prev" title="menu module" href="menu.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
@@ -27,7 +27,7 @@
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="modules.html" title="quick-cover-letter"
+          <a href="menu.html" title="menu module"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Cover Letter Writer 0.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" accesskey="U">quick-cover-letter</a> &#187;</li>
@@ -49,6 +49,7 @@ the cover letter.</p>
 <div><ul class="simple">
 <li><p><a class="reference internal" href="#section_loader.Section" title="section_loader.Section"><code class="xref py py-class docutils literal notranslate"><span class="pre">Section</span></code></a></p></li>
 <li><p><a class="reference internal" href="#section_loader.make_new_section" title="section_loader.make_new_section"><code class="xref py py-func docutils literal notranslate"><span class="pre">make_new_section()</span></code></a></p></li>
+<li><p><a class="reference internal" href="#section_loader.verify_sections" title="section_loader.verify_sections"><code class="xref py py-func docutils literal notranslate"><span class="pre">verify_sections()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#section_loader.load_section" title="section_loader.load_section"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_section()</span></code></a></p></li>
 <li><p><a class="reference internal" href="#section_loader.load_all_sections" title="section_loader.load_all_sections"><code class="xref py py-func docutils literal notranslate"><span class="pre">load_all_sections()</span></code></a></p></li>
 </ul>
@@ -57,6 +58,12 @@ the cover letter.</p>
 <dt class="sig sig-object py" id="section_loader.FILE_EXT">
 <span class="sig-prename descclassname"><span class="pre">section_loader.</span></span><span class="sig-name descname"><span class="pre">FILE_EXT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'.py'</span></em><a class="headerlink" href="#section_loader.FILE_EXT" title="Permalink to this definition">¶</a></dt>
 <dd><p>File type of section template files.</p>
+</dd></dl>
+
+<dl class="py data">
+<dt class="sig sig-object py" id="section_loader.SECTION_TYPE">
+<span class="sig-prename descclassname"><span class="pre">section_loader.</span></span><span class="sig-name descname"><span class="pre">SECTION_TYPE</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{0:</span> <span class="pre">'Intro',</span> <span class="pre">1:</span> <span class="pre">'Body',</span> <span class="pre">2:</span> <span class="pre">'Conclusion'}</span></em><a class="headerlink" href="#section_loader.SECTION_TYPE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dictionary for ID to String section type conversions.</p>
 </dd></dl>
 
 <dl class="py class">
@@ -74,7 +81,7 @@ content</p>
 
 <dl class="py data">
 <dt class="sig sig-object py" id="section_loader.TEMPLATE_CONTENT">
-<span class="sig-prename descclassname"><span class="pre">section_loader.</span></span><span class="sig-name descname"><span class="pre">TEMPLATE_CONTENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'#</span> <span class="pre">Replace</span> <span class="pre">values</span> <span class="pre">as</span> <span class="pre">needed</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">section\nLOCATION_ID</span> <span class="pre">=</span> <span class="pre">0</span> <span class="pre">#</span> <span class="pre">id</span> <span class="pre">for</span> <span class="pre">location</span> <span class="pre">in</span> <span class="pre">text</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">section</span> <span class="pre">is</span> <span class="pre">relevant</span> <span class="pre">to\nSTRONG_KEYWORDS</span> <span class="pre">=</span> <span class="pre">[]</span> <span class="pre">#</span> <span class="pre">keywords</span> <span class="pre">most</span> <span class="pre">relevant</span> <span class="pre">to</span> <span class="pre">section</span> <span class="pre">content\nWEAK_KEYWORDS</span> <span class="pre">=</span> <span class="pre">[]</span> <span class="pre">#</span> <span class="pre">keywords</span> <span class="pre">somewhat</span> <span class="pre">relevant</span> <span class="pre">to</span> <span class="pre">section</span> <span class="pre">content\nTEXT_CONTENT</span> <span class="pre">=</span>&#160; <span class="pre">#</span> <span class="pre">text</span> <span class="pre">written</span> <span class="pre">to</span> <span class="pre">cover</span> <span class="pre">letter\n'}</span></em><a class="headerlink" href="#section_loader.TEMPLATE_CONTENT" title="Permalink to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">section_loader.</span></span><span class="sig-name descname"><span class="pre">TEMPLATE_CONTENT</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'#</span> <span class="pre">Replace</span> <span class="pre">values</span> <span class="pre">as</span> <span class="pre">needed</span> <span class="pre">for</span> <span class="pre">the</span> <span class="pre">section\nSECTION_ID</span> <span class="pre">=</span> <span class="pre">0</span> <span class="pre">#</span> <span class="pre">id</span> <span class="pre">for</span> <span class="pre">location</span> <span class="pre">in</span> <span class="pre">text</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">section</span> <span class="pre">is</span> <span class="pre">relevant</span> <span class="pre">to\nSTRONG_KEYWORDS</span> <span class="pre">=</span> <span class="pre">[]</span> <span class="pre">#</span> <span class="pre">keywords</span> <span class="pre">most</span> <span class="pre">relevant</span> <span class="pre">to</span> <span class="pre">section</span> <span class="pre">content\nWEAK_KEYWORDS</span> <span class="pre">=</span> <span class="pre">[]</span> <span class="pre">#</span> <span class="pre">keywords</span> <span class="pre">somewhat</span> <span class="pre">relevant</span> <span class="pre">to</span> <span class="pre">section</span> <span class="pre">content\nTEXT_CONTENT</span> <span class="pre">=</span>&#160; <span class="pre">#</span> <span class="pre">text</span> <span class="pre">written</span> <span class="pre">to</span> <span class="pre">cover</span> <span class="pre">letter\n'}</span></em><a class="headerlink" href="#section_loader.TEMPLATE_CONTENT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Contents of section template file.</p>
 </dd></dl>
 
@@ -134,6 +141,12 @@ content</p>
 </dl>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="section_loader.verify_sections">
+<span class="sig-prename descclassname"><span class="pre">section_loader.</span></span><span class="sig-name descname"><span class="pre">verify_sections</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#section_loader.verify_sections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensures all sections have at least some amount of entries.</p>
+</dd></dl>
+
 </section>
 
 
@@ -145,8 +158,8 @@ content</p>
         <div class="sphinxsidebarwrapper">
   <div>
     <h4>Previous topic</h4>
-    <p class="topless"><a href="modules.html"
-                          title="previous chapter">quick-cover-letter</a></p>
+    <p class="topless"><a href="menu.html"
+                          title="previous chapter">menu module</a></p>
   </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
@@ -179,7 +192,7 @@ content</p>
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="modules.html" title="quick-cover-letter"
+          <a href="menu.html" title="menu module"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">Cover Letter Writer 0.1 documentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="modules.html" >quick-cover-letter</a> &#187;</li>
