@@ -10,7 +10,7 @@ import PySimpleGUI as psg
 
 
 # set theme
-psg.theme('DarkGrey11')
+psg.theme('DarkBrown1')
 
 
 MAINL_IN        = [[psg.Frame('Section Management', [
