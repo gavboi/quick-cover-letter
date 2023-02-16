@@ -17,7 +17,6 @@ SECTION_TYPE = {0: "Intro",
                 1: "Body",
                 2: "Conclusion"}
 """Dictionary for ID to String section type conversions."""
-                
 FILE_EXT = '.py'
 """File type of section template files."""
 TEMPLATE_CONTENT = {'# Replace values as needed for the section\n'
