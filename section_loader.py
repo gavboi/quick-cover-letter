@@ -5,6 +5,7 @@ Contains:
 
     * :class:`Section`
     * :func:`make_new_section`
+    * :func:`verify_sections`
     * :func:`load_section`
     * :func:`load_all_sections`
 """
@@ -12,11 +13,15 @@ Contains:
 from os.path import join, isfile
 from os import listdir
 
-
+SECTION_TYPE = {0: "Intro",
+                1: "Body",
+                2: "Conclusion"}
+"""Dictionary for ID to String section type conversions."""
+                
 FILE_EXT = '.py'
 """File type of section template files."""
 TEMPLATE_CONTENT = {'# Replace values as needed for the section\n'
-                    + 'LOCATION_ID = 0 # id for location in text that the '
+                    + 'SECTION_ID = 0 # id for location in text that the '
                     + 'section is relevant to\n'
                     + 'STRONG_KEYWORDS = [''] # keywords most relevant '
                     + 'to section content\n'
@@ -50,6 +55,16 @@ def make_new_section(name):
     with open(join('sections', file_name + FILE_EXT),
               'w', encoding='utf-8') as file:
         file.write(TEMPLATE_CONTENT)
+
+
+def verify_sections(amount=1):
+    """Ensures all sections have at least some amount of entries.
+    """
+    
+    # count 0s, 1s, 2s
+    # check counts >= amount
+    raise NotImplementedError()
+        
 
 
 def load_section(name, warn=True):
